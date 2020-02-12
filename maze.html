@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        const square = (n) => {
+            let str = ""
+
+            for (k = 0; k < n; k++) {
+                str += '@'
+                if (k % 2 == 0) {
+                    if (k % 4 == 0) {
+                        for (l = 0; l < n - 2; l++) {
+                            if (l == 0) {
+                                str += ' '
+                            } else {
+                                str += '@'
+                            }
+                        }
+                    } else {
+                        for (l = 0; l < n - 2; l++) {
+                            if (l == (n-3)) {
+                                str += ' '
+                            } else {
+                                str += '@'
+                            }
+                        }
+                    }
+                } else {
+                    for (l = 0; l < n - 2; l++) {
+                        str += ' '
+                    }
+                }
+                str += '@\n'
+            }
+
+            console.log(str)
+        }
+
+        let num = prompt("Input number")
+
+        square(num)
+
+    </script>
+</body>
+
+</html>
